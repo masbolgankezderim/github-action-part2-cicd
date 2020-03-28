@@ -1,0 +1,25 @@
+
+name: CI-CD-Pipeline-to-aws
+env:
+  EB_PACKAGE_S3_BUCKET_NAME: "my-first-bucket-app"
+  EB_APPLICATION_NAME: "My-APP"
+  EB_EMVOIRMENT_NAME: "My-APP-env"
+  DEPLOY_PACKAGE_NAME: "flask-app${{ github.sha }}.zip"
+  AWS_REGION_NAME: "us-east"
+
+
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  my_ci_part:
+    runs-on: ubuntu-latest
+    steps:
+    - name: git clone our repo
+      uses: actions/checkout@v2
+
+    - name: Create ZIP Deployment package
+      run: zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
+
