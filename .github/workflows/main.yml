@@ -47,7 +47,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.MY_AWS_SECRET_KEY }}
         aws-region: ${{ env.AWS_REGION_NAME }}
 
-    - name: Create new ElasticBeanStalk application
+    - name: Create new ElasticBeanstalk application
       run: |
         aws elasticbeanstalk create-application-version \
         --application-name ${{ env.EB_APPLICATION_NAME }} \
