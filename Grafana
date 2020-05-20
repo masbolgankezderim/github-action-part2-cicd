@@ -1,0 +1,113 @@
+{
+  "datasource": null,
+  "ackEventColor": "rgb(56, 219, 156)",
+  "ageField": true,
+  "customLastChangeFormat": false,
+  "descriptionAtNewLine": false,
+  "descriptionField": true,
+  "fontSize": "100%",
+  "gridPos": {
+    "h": 8,
+    "w": 24,
+    "x": 0,
+    "y": 0
+  },
+  "highlightBackground": false,
+  "highlightNewEvents": true,
+  "highlightNewerThan": "1h",
+  "hostField": true,
+  "hostGroups": false,
+  "hostProxy": false,
+  "hostTechNameField": false,
+  "hostsInMaintenance": true,
+  "id": 2,
+  "lastChangeFormat": "",
+  "layout": "table",
+  "limit": 1000,
+  "markAckEvents": false,
+  "okEventColor": "rgb(56, 189, 113)",
+  "options": {},
+  "pageSize": 50,
+  "problemTimeline": true,
+  "resizedColumns": [],
+  "schemaVersion": 7,
+  "severityField": true,
+  "showEvents": {
+    "text": "Problems",
+    "value": 1
+  },
+  "showTags": false,
+  "showTriggers": "unacknowledged",
+  "sortTriggersBy": {
+    "text": "last change",
+    "value": "lastchange"
+  },
+  "statusField": true,
+  "statusIcon": false,
+  "targets": [
+    {
+      "application": {
+        "filter": ""
+      },
+      "datasource": "Zabbix",
+      "group": {
+        "filter": "Monitoring Exchange"
+      },
+      "host": {
+        "filter": ""
+      },
+      "proxy": {
+        "filter": ""
+      },
+      "refId": "A",
+      "tags": {
+        "filter": ""
+      },
+      "trigger": {
+        "filter": null
+      }
+    }
+  ],
+  "timeFrom": null,
+  "timeShift": null,
+  "title": "Exchange problems",
+  "triggerSeverity": [
+    {
+      "color": "rgb(108, 108, 108)",
+      "priority": 0,
+      "severity": "Not classified",
+      "show": false
+    },
+    {
+      "color": "rgb(120, 158, 183)",
+      "priority": 1,
+      "severity": "Information",
+      "show": false
+    },
+    {
+      "color": "rgb(175, 180, 36)",
+      "priority": 2,
+      "severity": "Warning",
+      "show": false
+    },
+    {
+      "color": "rgb(255, 137, 30)",
+      "priority": 3,
+      "severity": "Average",
+      "show": true
+    },
+    {
+      "color": "rgb(255, 101, 72)",
+      "priority": 4,
+      "severity": "High",
+      "show": true
+    },
+    {
+      "color": "rgb(215, 0, 0)",
+      "priority": 5,
+      "severity": "Disaster",
+      "show": true
+    }
+  ],
+  "type": "alexanderzobnin-zabbix-triggers-panel"
+}
